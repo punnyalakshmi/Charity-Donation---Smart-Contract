@@ -104,7 +104,8 @@ contract CharityDonation {
 
     function refund(uint _id) external {
         Campaign memory campaign = campaigns[_id];
-        require(block.timestamp > campaign.endDate, "Campaign has not ended yet!");
+        require(block.timestamp > campaign.endDate + 10 days, "Campaign has not expired!");
+
         uint bal = offerdAmount[_id][msg.sender];
         offerdAmount[_id][msg.sender] = 0;
         token.transfer(msg.sender, bal);
