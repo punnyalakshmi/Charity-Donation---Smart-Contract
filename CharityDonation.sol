@@ -4,7 +4,7 @@ pragma solidity >=0.7.0 <0.9.0;
 
 /**
  * @title Charity Donation
- * @dev Implements donation process with anonimity.
+ * @dev Implements donation process with pseudonymity.
  */
 
 import "./IERC20.sol";

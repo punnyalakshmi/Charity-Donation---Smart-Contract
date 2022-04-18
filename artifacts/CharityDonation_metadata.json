@@ -375,11 +375,11 @@
 	},
 	"sources": {
 		"CharityDonation.sol": {
-			"keccak256": "0xe1899a28de6b3caa71b50b30265a68981e4281ef47226652ae79bb138d7cfa4b",
+			"keccak256": "0x433ca8922637ef00e73f71fafb3d6406a3d19baa34bb6068b7446ce690965f7a",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://52f4f487505235421fd50aa8d902031d1ee53e7bed484309751ec1b8b8406076",
-				"dweb:/ipfs/QmQe87f7dhkb1xURGHdLg1BE3kpjBHhiXGqVAFBEPuLqk5"
+				"bzz-raw://896e8bcd5603d749829abd28e96b39e7e40dd89f1e65d741a5d2be866ef1fab5",
+				"dweb:/ipfs/QmPDrEcqJtEw74RAQweTqRyTUyoNefynXyJZdLHsX2K8za"
 			]
 		},
 		"IERC20.sol": {
