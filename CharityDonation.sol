@@ -32,7 +32,7 @@ contract CharityDonation {
     uint public count;
     // Mapping from campaignId to Campaign
     mapping(uint => Campaign) public campaigns;
-    // Mapping from campaign campaignId => Offerr => amount Offerd
+    // Mapping from campaignId => Offerer => amount Offerd
     mapping(uint => mapping(address => uint)) public offerdAmount;
 
     constructor(address _token) {
@@ -81,6 +81,7 @@ contract CharityDonation {
     function refuse(uint _id, uint _amount) external {
         Campaign storage campaign = campaigns[_id];
         require(block.timestamp <= campaign.endDate, "Campaign ended already!");
+        require(offerdAmount[_id][msg.sender] >= _amount, "Amount is greater than offered!");
 
         campaign.offerd -= _amount;
         offerdAmount[_id][msg.sender] -= _amount;
