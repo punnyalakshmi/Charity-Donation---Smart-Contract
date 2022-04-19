@@ -104,6 +104,7 @@ contract CharityDonation {
 
     function refund(uint _id) external {
         Campaign memory campaign = campaigns[_id];
+        require(!campaign.claimed, "Donation is already claimed!");
         require(block.timestamp > campaign.endDate + 10 days, "Campaign has not expired!");
 
         uint bal = offerdAmount[_id][msg.sender];
