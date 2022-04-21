@@ -42,7 +42,7 @@ contract CharityDonation {
     function begin(uint _target, uint32 _startDate, uint32 _endDate) external {
         require(_startDate >= block.timestamp, "Start date is less than current date!");
         require(_endDate >= _startDate, "End date is less than start date!");
-        require(_endDate <= block.timestamp + 90 days, "End date is greater than maximum duration!");
+        require(_endDate <= _startDate + 90 days, "End date is greater than maximum duration!");
 
         count += 1;
         campaigns[count] = Campaign({
